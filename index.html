@@ -1,106 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yash Varshney - Marriage Profile</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Marriage Profile - Yash Varshney</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    /* Simple slider */
-    .slider { position: relative; overflow: hidden; }
-    .slides { display: flex; transition: transform 0.6s ease-in-out; }
-    .slides img { width: 100%; flex-shrink: 0; border-radius: 1rem; }
-    .nav-btn {
-      position: absolute; top: 50%; transform: translateY(-50%);
-      background: rgba(0,0,0,0.5); color: white;
-      border: none; padding: 0.5rem 1rem; cursor: pointer; border-radius: 9999px;
-    }
-    .prev { left: 10px; }
-    .next { right: 10px; }
-  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- SwiperJS for modern carousel -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
-<body class="bg-gray-100 text-gray-900 font-sans">
 
-  <!-- Container -->
-  <div class="max-w-4xl mx-auto p-6">
+<body class="bg-gradient-to-r from-pink-100 via-purple-100 to-blue-100 min-h-screen font-sans">
 
-    <!-- Title -->
-    <h1 class="text-4xl font-bold text-center mb-6">Marriage Profile - Yash Varshney</h1>
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-white py-6 shadow-lg">
+    <h1 class="text-4xl md:text-5xl font-extrabold text-center">🌸 Yash Varshney 🌸</h1>
+    <p class="text-center text-lg">Marriage Profile</p>
+  </header>
 
-    <!-- Image Slider -->
-    <div class="slider mb-8">
-      <div class="slides" id="slides">
-        <img src="images/1.jpg" alt="Profile Photo 1">
-        <img src="images/2.jpg" alt="Profile Photo 2">
-        <img src="images/3.jpg" alt="Profile Photo 3">
-        <img src="images/4.jpg" alt="Profile Photo 4">
-        <img src="images/5.jpg" alt="Profile Photo 5">
-        <img src="images/6.jpg" alt="Profile Photo 6">
+  <!-- Image Carousel -->
+  <div class="max-w-3xl mx-auto mt-6">
+    <div class="swiper mySwiper rounded-2xl shadow-xl">
+      <div class="swiper-wrapper">
+        <!-- Add your photos in /images folder -->
+        <div class="swiper-slide"><img src="images/1.jpeg" class="w-full h-96 object-cover rounded-2xl"></div>
+        <div class="swiper-slide"><img src="images/2.jpeg" class="w-full h-96 object-cover rounded-2xl"></div>
+        <div class="swiper-slide"><img src="images/3.jpeg" class="w-full h-96 object-cover rounded-2xl"></div>
+        <div class="swiper-slide"><img src="images/4.jpeg" class="w-full h-96 object-cover rounded-2xl"></div>
+        <div class="swiper-slide"><img src="images/5.jpeg" class="w-full h-96 object-cover rounded-2xl"></div>
+        <div class="swiper-slide"><img src="images/6.jpeg" class="w-full h-96 object-cover rounded-2xl"></div>
       </div>
-      <button class="nav-btn prev" onclick="moveSlide(-1)">❮</button>
-      <button class="nav-btn next" onclick="moveSlide(1)">❯</button>
+      <!-- Navigation -->
+      <div class="swiper-button-next text-pink-600"></div>
+      <div class="swiper-button-prev text-pink-600"></div>
+      <div class="swiper-pagination"></div>
     </div>
+  </div>
+
+  <!-- Content -->
+  <main class="max-w-4xl mx-auto p-6 grid gap-6 mt-8">
 
     <!-- Personal Details -->
-    <section class="mb-6">
-      <h2 class="text-2xl font-semibold mb-2">Personal Details</h2>
-      <ul class="list-disc pl-6">
-        <li><strong>Name:</strong> Yash Varshney</li>
-        <li><strong>Gender:</strong> Male</li>
-        <li><strong>Date of Birth:</strong> 24 April 2000</li>
-        <li><strong>Place of Birth:</strong> Etah, Uttar Pradesh</li>
-        <li><strong>Time of Birth:</strong> 10:30 AM</li>
-        <li><strong>Height:</strong> 5 ft 8 in (173 cm)</li>
-        <li><strong>Religion:</strong> Hindu (Barahseni)</li>
-        <li><strong>Complexion:</strong> Fair</li>
+    <section class="bg-white shadow-lg rounded-2xl p-6 border-t-4 border-pink-400">
+      <h2 class="text-2xl font-bold mb-3 text-pink-600">👤 Personal Details</h2>
+      <ul class="grid md:grid-cols-2 gap-2 text-gray-700">
+        <li><b>Name:</b> Yash Varshney</li>
+        <li><b>DOB:</b> 24 April 2000 (10:30 AM)</li>
+        <li><b>Birth Place:</b> Etah, Uttar Pradesh</li>
+        <li><b>Height:</b> 5'8" (173 cm)</li>
+        <li><b>Religion:</b> Hindu (Barahseni)</li>
+        <li><b>Complexion:</b> Fair</li>
       </ul>
     </section>
 
     <!-- Education & Job -->
-    <section class="mb-6">
-      <h2 class="text-2xl font-semibold mb-2">Education & Career</h2>
-      <p>Bachelor of Engineering & Technology in Computer Science, Aligarh Muslim University</p>
-      <p>Currently working as <strong>Data Scientist</strong> at <strong>Accenture Gurgaon</strong> (Ex-Cognizant)</p>
-      <p><strong>Annual Income:</strong> ₹15 LPA</p>
+    <section class="bg-white shadow-lg rounded-2xl p-6 border-t-4 border-purple-400">
+      <h2 class="text-2xl font-bold mb-3 text-purple-600">🎓 Education & Career</h2>
+      <p>Bachelor of Engineering & Technology in Computer Science from <b>Aligarh Muslim University</b>.</p>
+      <p>Currently working as <b>Data Scientist</b> at <b>Accenture Gurgaon</b> (Ex-Cognizant).</p>
+      <p><b>Annual Income:</b> ₹15 LPA</p>
     </section>
 
     <!-- Family Details -->
-    <section class="mb-6">
-      <h2 class="text-2xl font-semibold mb-2">Family Details</h2>
-      <ul class="list-disc pl-6">
-        <li><strong>Father:</strong> Ranjeet Kumar Varshney (Businessman, Shubham Cloth Emporium, Etah)</li>
-        <li><strong>Mother:</strong> Reema Varshney (Homemaker)</li>
-        <li><strong>Sister:</strong> Manya Varshney (Studying BVSc)</li>
-        <li><strong>Grandparents:</strong> Shri Kishan Chandra Varshney & Mithlesh Varshney</li>
+    <section class="bg-white shadow-lg rounded-2xl p-6 border-t-4 border-indigo-400">
+      <h2 class="text-2xl font-bold mb-3 text-indigo-600">🏡 Family Details</h2>
+      <ul class="list-disc pl-6 text-gray-700">
+        <li>Father: Ranjeet Kumar Varshney (Businessman, Shubham Cloth Emporium, Etah)</li>
+        <li>Mother: Reema Varshney (Homemaker)</li>
+        <li>Sister: Manya Varshney (Studying BVSc)</li>
+        <li>Grandparents: Shri Kishan Chandra Varshney & Mithlesh Varshney</li>
       </ul>
     </section>
 
     <!-- Contact -->
-    <section class="mb-6">
-      <h2 class="text-2xl font-semibold mb-2">Contact</h2>
-      <p><strong>Phone:</strong> 9412617248 / 9219550220</p>
-      <p><strong>Address:</strong> Holi Mohalla, Near Sardar Gas Service, Etah, UP</p>
+    <section class="bg-white shadow-lg rounded-2xl p-6 border-t-4 border-green-400">
+      <h2 class="text-2xl font-bold mb-3 text-green-600">☎️ Contact</h2>
+      <p><b>Phone:</b> 9412617248 / 9219550220</p>
+      <p><b>Address:</b> Holi Mohalla, Near Sardar Gas Service, Etah, UP</p>
     </section>
 
     <!-- Instagram -->
-    <div class="text-center mt-6">
-      <a href="https://instagram.com/y_varshney24" target="_blank" 
-         class="px-6 py-2 bg-pink-500 text-white rounded-full shadow-lg hover:bg-pink-600">
-        🌸 Connect on Instagram
+    <div class="text-center">
+      <a href="https://instagram.com/y_varshney24" target="_blank"
+         class="px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-500 text-white text-lg rounded-full shadow-lg hover:opacity-90 inline-flex items-center gap-2">
+        <i class="fab fa-instagram"></i> Connect on Instagram
       </a>
     </div>
-  </div>
+  </main>
 
-  <!-- Slider Script -->
+  <!-- Footer -->
+  <footer class="text-center py-4 mt-8 bg-gray-800 text-gray-100">
+    © 2025 Yash Varshney | Marriage Profile
+  </footer>
+
+  <!-- Swiper Init -->
   <script>
-    let index = 0;
-    function moveSlide(step) {
-      const slides = document.getElementById('slides');
-      const total = slides.children.length;
-      index = (index + step + total) % total;
-      slides.style.transform = `translateX(-${index * 100}%)`;
-    }
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: { delay: 3000, disableOnInteraction: false },
+      pagination: { el: ".swiper-pagination", clickable: true },
+      navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+    });
   </script>
-
 </body>
 </html>
