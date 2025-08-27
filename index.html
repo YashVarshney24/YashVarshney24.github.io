@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yash Varshney - Marriage Profile</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Simple slider */
+    .slider { position: relative; overflow: hidden; }
+    .slides { display: flex; transition: transform 0.6s ease-in-out; }
+    .slides img { width: 100%; flex-shrink: 0; border-radius: 1rem; }
+    .nav-btn {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      background: rgba(0,0,0,0.5); color: white;
+      border: none; padding: 0.5rem 1rem; cursor: pointer; border-radius: 9999px;
+    }
+    .prev { left: 10px; }
+    .next { right: 10px; }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-900 font-sans">
+
+  <!-- Container -->
+  <div class="max-w-4xl mx-auto p-6">
+
+    <!-- Title -->
+    <h1 class="text-4xl font-bold text-center mb-6">Marriage Profile - Yash Varshney</h1>
+
+    <!-- Image Slider -->
+    <div class="slider mb-8">
+      <div class="slides" id="slides">
+        <img src="images/1.jpg" alt="Profile Photo 1">
+        <img src="images/2.jpg" alt="Profile Photo 2">
+        <img src="images/3.jpg" alt="Profile Photo 3">
+        <img src="images/4.jpg" alt="Profile Photo 4">
+        <img src="images/5.jpg" alt="Profile Photo 5">
+        <img src="images/6.jpg" alt="Profile Photo 6">
+      </div>
+      <button class="nav-btn prev" onclick="moveSlide(-1)">❮</button>
+      <button class="nav-btn next" onclick="moveSlide(1)">❯</button>
+    </div>
+
+    <!-- Personal Details -->
+    <section class="mb-6">
+      <h2 class="text-2xl font-semibold mb-2">Personal Details</h2>
+      <ul class="list-disc pl-6">
+        <li><strong>Name:</strong> Yash Varshney</li>
+        <li><strong>Gender:</strong> Male</li>
+        <li><strong>Date of Birth:</strong> 24 April 2000</li>
+        <li><strong>Place of Birth:</strong> Etah, Uttar Pradesh</li>
+        <li><strong>Time of Birth:</strong> 10:30 AM</li>
+        <li><strong>Height:</strong> 5 ft 8 in (173 cm)</li>
+        <li><strong>Religion:</strong> Hindu (Barahseni)</li>
+        <li><strong>Complexion:</strong> Fair</li>
+      </ul>
+    </section>
+
+    <!-- Education & Job -->
+    <section class="mb-6">
+      <h2 class="text-2xl font-semibold mb-2">Education & Career</h2>
+      <p>Bachelor of Engineering & Technology in Computer Science, Aligarh Muslim University</p>
+      <p>Currently working as <strong>Data Scientist</strong> at <strong>Accenture Gurgaon</strong> (Ex-Cognizant)</p>
+      <p><strong>Annual Income:</strong> ₹15 LPA</p>
+    </section>
+
+    <!-- Family Details -->
+    <section class="mb-6">
+      <h2 class="text-2xl font-semibold mb-2">Family Details</h2>
+      <ul class="list-disc pl-6">
+        <li><strong>Father:</strong> Ranjeet Kumar Varshney (Businessman, Shubham Cloth Emporium, Etah)</li>
+        <li><strong>Mother:</strong> Reema Varshney (Homemaker)</li>
+        <li><strong>Sister:</strong> Manya Varshney (Studying BVSc)</li>
+        <li><strong>Grandparents:</strong> Shri Kishan Chandra Varshney & Mithlesh Varshney</li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section class="mb-6">
+      <h2 class="text-2xl font-semibold mb-2">Contact</h2>
+      <p><strong>Phone:</strong> 9412617248 / 9219550220</p>
+      <p><strong>Address:</strong> Holi Mohalla, Near Sardar Gas Service, Etah, UP</p>
+    </section>
+
+    <!-- Instagram -->
+    <div class="text-center mt-6">
+      <a href="https://instagram.com/y_varshney24" target="_blank" 
+         class="px-6 py-2 bg-pink-500 text-white rounded-full shadow-lg hover:bg-pink-600">
+        🌸 Connect on Instagram
+      </a>
+    </div>
+  </div>
+
+  <!-- Slider Script -->
+  <script>
+    let index = 0;
+    function moveSlide(step) {
+      const slides = document.getElementById('slides');
+      const total = slides.children.length;
+      index = (index + step + total) % total;
+      slides.style.transform = `translateX(-${index * 100}%)`;
+    }
+  </script>
+
+</body>
+</html>
